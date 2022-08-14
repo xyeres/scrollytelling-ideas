@@ -1,0 +1,53 @@
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fullscreen {
+  height: 100vh;
+}
+
+.intro_text-wrap,
+.potatoe_head-wrap {
+  height: 100vh;
+  background-color: #002039;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.year {
+  font-size: 1.6rem;
+  columns: #ffa75c;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: "Pacifico", cursive;
+  font-family: "Rubik Iso", cursive;
+  font-size: 3rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.body-text {
+  color: black;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.factual-text {
+  font-size: 2.81rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0;
+  max-width: 60%;
+}
+
+.potatoe_head-wrap {
+  background-color: #dcb58b;
+}
