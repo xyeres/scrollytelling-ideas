@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fact {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 6em;
+}
+
+.fullscreen {
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  border: currentColor 14px solid;
+  width: fit-content;
+  margin: 2em auto;
+  padding: 1em;
+}
