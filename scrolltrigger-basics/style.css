@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+}
+
+.fullscreen {
+  height: 100vh;
+  background-color: lightblue;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: beige;
+}
