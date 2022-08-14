@@ -1,7 +1,29 @@
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .fullscreen {
-  height: 100vh;
+  min-height: 100vh;
+  background-color: antiquewhite;
+}
+
+.body-text {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+
+.img1 {
+  float: left;
+}
+
+.img2 {
+  float:right;
 }
