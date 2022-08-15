@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.fullscreen {
+  height: 100vh;
+}
+
+.content {
+  margin: 4rem auto;
+  max-width: 50%;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.quote-wrap {
+  max-width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 3em;
+}
+
+.quote-one {
+  font-size: 2rem;
+  transform: rotate(3.5deg);
+  margin-bottom: 1.75rem;
+}
+
+.quote-one::before {
+  content: open-quote;
+}
+
+.quote-two {
+  font-family: 'Rubik Marker Hatch', cursive;
+  font-size: 1.8rem;
+  transform: rotate(-2.5deg);
+  margin-bottom: 1.75rem;
+  line-height: 1.1em;
+
+}
+
+.quote-two::after {
+  content: close-quote;
+  font-family: serif;
+  font-size: 2rem;
+}
+
+.quote-three {
+  font-size: 1.2rem;
+  font-style: italic;
+}
