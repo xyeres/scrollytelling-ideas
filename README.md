@@ -20,3 +20,11 @@ There are *many* examples to be found at places like awwwards.com, or [GSAP Show
 - [https://www.washingtonpost.com/graphics/2020/world/corona-simulator/](https://www.washingtonpost.com/graphics/2020/world/corona-simulator/)
 - [https://graphics.wsj.com/trials/#chapter=1](https://graphics.wsj.com/trials/#chapter=1)
 - [https://qz.com/576057/why-infectious-bacteria-are-winning/](https://qz.com/576057/why-infectious-bacteria-are-winning/)
+
+Scrollytelling is not one tool or library but a collection of ideas and techniques that require attention to detail. There are many tools that may assist in achieving the desired look. Animations are a big part of the process and GSAP is not the only option when picking an animation library. Here are a few other libraries to check out: 
+#### Animation Libraries
+[gsap](https://greensock.com/gsap/) — professional-grade animation for the modern web
+[popmotion](https://popmotion.io/) — simple libraries for delightful interfaces
+[animejs](https://animejs.com/) — a lightweight library with a simple and powerful API
+[mojs](https://mojs.github.io/) — the motion graphics toolbelt for the web
+[spirit](https://spiritapp.io/) — the ultimate tool to create high-quality animations directly in the browser
