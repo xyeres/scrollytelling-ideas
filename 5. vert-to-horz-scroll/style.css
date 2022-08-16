@@ -2,8 +2,97 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: black;
+  font-family: sans-serif;
 }
 
 .fullscreen {
   height: 100vh;
+}
+
+.heading {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  z-index: 10;
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  padding: 1rem;
+  max-width: 80%;
+  transform: translate(0%, -100%);
+}
+
+.heading2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  z-index: 10;
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  padding: 1rem;
+  max-width: 80%;
+}
+
+/* .img-hero {
+  width: 100%;
+  position: absolute;
+  left: 49%;
+  top: 40%;
+  transform: translate(0%, -49%);
+} */
+
+.content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.container-wrapper {
+  position: relative;
+  height: 100vh;
+  display: flex;
+}
+.container-left {
+  background-color: rgb(39, 130, 227);
+  width: 50%;
+}
+
+.container-right {
+  width: 50%;
+  height: 100vh;
+  background-color: rgb(39, 130, 227);
+  overflow: hidden;
+  position: relative;
+  /* background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 45% 0px;
+  background-image: url("images/city-night.jpeg"); */
+}
+
+
+.words {
+  overflow: hidden;
+}
+
+.animate-text {
+  color: white;
+  display: inline-block;
+}
+
+.coverImg {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  mix-blend-mode: screen;
+  width: 100%;
+  height: 100%;
+}
+
+.img2 {
+  opacity: 0;
 }
