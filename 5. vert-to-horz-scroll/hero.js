@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-
 function turnInnerTextIntoHTML(selector) {
   let html = "<div style='display: inline-block;'>";
   const heading = document.querySelector(selector);
