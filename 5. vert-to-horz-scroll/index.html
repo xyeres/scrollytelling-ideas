@@ -8,7 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@100;200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -19,13 +27,155 @@
         <h1 class="words heading">Explore Japan.</h1>
       </div>
       <div class="container-right">
-        <img src="images/city-night.jpeg" class="coverImg img1" alt="">
-        <img src="images/hitachi-tower.jpeg" class="coverImg img2" alt="">
+        <img src="images/city-night.jpeg" class="coverImg img1" alt="" />
+        <img src="images/hitachi-tower.jpeg" class="coverImg img2" alt="" />
       </div>
     </div>
-    <div class="fullscreen"></div>
+
+    <!-- Horizontal Scroll Section -->
+    <section id="panels">
+      <div id="panels-container" style="width: 500%">
+        <article id="panel-1" class="panel fullscreen red">
+          <div class="panel-container">
+            <div class="flex flex-column gap-4 p-8">
+              <img src="images/dragon.jpeg" alt="dragon" class="panel-one-img">
+              <h2 class="secondary-heading panel-one-heading">
+                History of <span class="jp">東京</span>
+              </h2>
+              <p class="step-description panel-one-description">
+                The history of Tokyo shows the growth of Japan's largest urban
+                center. The eastern part of Tokyo occupies land in the Kantō
+                region that together with the modern-day Saitama Prefecture, the
+                city of Kawasaki and the eastern part of Yokohama make up
+                Musashi; one of the provinces under the ritsuryō system.[1] The
+                23 special wards, including Chiyoda, Chuo, Minato, Shibuya and
+                Shinjuku wards, form the central part of Tokyo. Western Tokyo
+                occupies the Tama district. Tokyo's oldest Buddhist temple is
+                Sensō-ji in Asakusa, founded in 628. The name of Edo first
+                appears in the 12th century.
+              </p>
+
+              <div class="panels-navigation text-right">
+                <div class="nav-panel" data-sign="plus">
+                  <a href="#panel-2" class="anchor">Next</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="panel-2" class="panel fullscreen orange">
+          <div class="panel-container">
+            <div class="row">
+              <div class="col-6">
+                <img src="" alt="" />
+              </div>
+              <div class="col-6 flex flex-row">
+                <h2>Panel 2</h2>
+
+                <p class="step-description">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Including versions of Lorem Ipsum.
+                </p>
+
+                <div class="panels-navigation">
+                  <div class="nav-panel" data-sign="minus">
+                    <a href="#panel-1" class="anchor">Prev</a>
+                  </div>
+                  <div class="nav-panel" data-sign="plus">
+                    <a href="#panel-3" class="anchor">Next</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="panel-3" class="panel fullscreen purple">
+          <div class="panel-container">
+            <div class="row">
+              <div class="col-6">
+                <img src="" alt="" />
+              </div>
+              <div class="col-6 flex flex-row">
+                <h2>Panel 3</h2>
+
+                <p class="step-description">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Including versions of Lorem Ipsum.
+                </p>
+
+                <div class="panels-navigation">
+                  <div class="nav-panel" data-sign="minus">
+                    <a href="#panel-2" class="anchor">Prev</a>
+                  </div>
+                  <div class="nav-panel" data-sign="plus">
+                    <a href="#panel-4" class="anchor">Next</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="panel-4" class="panel fullscreen green">
+          <div class="panel-container">
+            <div class="row">
+              <div class="col-6">
+                <img src="" alt="" />
+              </div>
+              <div class="col-6 flex flex-row">
+                <h2>Panel 4</h2>
+
+                <p class="step-description">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Including versions of Lorem Ipsum.
+                </p>
+
+                <div class="panels-navigation">
+                  <div class="nav-panel" data-sign="minus">
+                    <a href="#panel-3" class="anchor">Prev</a>
+                  </div>
+                  <div class="nav-panel" data-sign="plus">
+                    <a href="#panel-5" class="anchor">Next</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article id="panel-5" class="panel fullscreen gray">
+          <div class="panel-container">
+            <div class="row">
+              <div class="col-6">
+                <img src="" alt="" />
+              </div>
+              <div class="col-6 flex flex-row">
+                <h2>Panel 5</h2>
+
+                <p class="step-description">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Including versions of Lorem Ipsum.
+                </p>
+
+                <div class="panels-navigation text-right">
+                  <div class="nav-panel" data-sign="minus">
+                    <a href="#panel-4" class="anchor">Prev</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="map" class="fullscreen"></section>
+
+    <!-- end horizontal section paste -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    <script src="app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+    <script src="gsapSetup.js"></script>
+    <script src="hero.js"></script>
+    <script src="panels.js"></script>
   </body>
 </html>

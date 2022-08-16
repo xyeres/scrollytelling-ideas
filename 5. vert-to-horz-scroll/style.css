@@ -1,17 +1,50 @@
+:root {
+  --clr-panel-text: #d6d6d6;
+}
+
+/* RESET */
+
+html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
   box-sizing: border-box;
   background-color: black;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  overscroll-behavior: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* BASE STYLES */
+p {
+  line-height: 1.6rem;
+  font-weight: 300;
+}
+
+a {
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Manrope", sans-serif;
 }
 
 .fullscreen {
+  display: block;
+  width: 100%;
   height: 100vh;
+  overflow: hidden;
 }
 
 .heading {
-  font-family: "Manrope", sans-serif;
   font-weight: 500;
   z-index: 10;
   font-size: 5rem;
@@ -24,27 +57,96 @@ body {
   transform: translate(0%, -100%);
 }
 
-.heading2 {
-  font-family: "Manrope", sans-serif;
-  font-weight: 500;
-  z-index: 10;
-  font-size: 5rem;
+.secondary-heading {
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 10%;
-  padding: 1rem;
-  max-width: 80%;
+  font-family: "Manrope", sans-serif;
+  font-weight: 100;
+  font-size: 5rem;
 }
 
-/* .img-hero {
-  width: 100%;
-  position: absolute;
-  left: 49%;
-  top: 40%;
-  transform: translate(0%, -49%);
-} */
+/* Panels */
 
+#panels #panels-container {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding: 0;
+  overflow: hidden;
+}
+#panels #panels-container .panel {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--clr-panel-text);
+  text-align: left;
+}
+#panels #panels-container .panel img {
+  max-width: 100%;
+  /* height: auto; */
+  display: block;
+}
+#panels #panels-container .panel .panels-navigation {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+#panels #panels-container .panel .anchor-panel,
+#panels #panels-container .panel .nav-panel {
+  color: #000;
+  text-transform: uppercase;
+  margin-right: 2rem;
+}
+#panels #panels-container .panels-navigation {
+  position: absolute;
+  width: 100%;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* PANEL SPECIFICS */
+.panel-one-img {
+  position: absolute;
+  left: -50%;
+  top:0;
+  height: 100vh;
+  object-fit: cover;
+  width:100%;
+}
+
+.panel-one-heading {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  font-size: 9rem;
+  font-weight: 100;
+}
+
+.panel-one-description {
+  max-width: 20rem;
+  position: absolute;
+  right: 14%;
+  top: 10%;
+}
+
+.jp {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 100;
+}
+
+/* end panels */
+
+/* HEADER */
 .content {
   display: flex;
   height: 100%;
@@ -67,12 +169,7 @@ body {
   background-color: rgb(39, 130, 227);
   overflow: hidden;
   position: relative;
-  /* background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 45% 0px;
-  background-image: url("images/city-night.jpeg"); */
 }
-
 
 .words {
   overflow: hidden;
@@ -95,4 +192,37 @@ body {
 
 .img2 {
   opacity: 0;
+}
+
+/* UTILITIES */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.gap {
+  gap: 1.6rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.p-8 {
+  padding: 2rem;
 }
