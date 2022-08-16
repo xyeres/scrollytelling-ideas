@@ -34,7 +34,7 @@ tween = gsap.to(panels, {
     trigger: "#panels-container",
     pin: true,
     start: "top top",
-    scrub: 2,
+    scrub: 0.3,
     // snap: {
     // 	snapTo: 1 / (panels.length - 1),
     // 	inertia: true,
@@ -45,13 +45,75 @@ tween = gsap.to(panels, {
 });
 
 /* Per-panel Animations */
-const panel1 = gsap.timeline({
-  scrollTrigger: { trigger: ".panel-one-img", start: "10% bottom" },
+
+// PANEL 1
+const p1 = gsap.timeline();
+p1.fromTo(
+  ".panel-one-img",
+  { x: -300, autoAlpha: 0 },
+  { x: 0, autoAlpha: 1, duration: 1 }
+)
+  .from(".panel-one-heading", { autoAlpha: 0, y: 200, duration: 0.76 })
+  .from(".panel-one-desc", { autoAlpha: 0 }, "-=.75");
+
+ScrollTrigger.create({
+  animation: p1,
+  trigger: ".panel-one-img",
+  start: "10% bottom",
 });
-panel1
-  .fromTo(
-    ".panel-one-img",
-    { x: -300, autoAlpha: 0 },
-    { x: 0, autoAlpha: 1, duration: 1 }
-  )
-  .to(".panel-one-heading", { y: -150, delay: 0.25 });
+
+const reveal = gsap.timeline();
+reveal.to(".panel-one-desc-after", { height: 20 });
+ScrollTrigger.create({
+  toggleActions: "restart reverse restart reverse",
+  animation: reveal,
+  start: "2% top",
+  end: "bottom",
+  endTrigger: "#panel-2",
+  trigger: ".panel-one-desc",
+});
+
+// PANEL 2
+const p2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".panel-two-img",
+    scrub: 2.5,
+    end: () => "+=" + (panelsContainer.offsetWidth - innerWidth),
+    start: "top top",
+    containerAnimation: tween,
+  },
+});
+
+p2.from(".panel-two-img", { xPercent: 15, scale: 1.5 });
+
+const p2reveal = gsap.timeline();
+p2reveal.from(".panel-two-heading", { x: 280 });
+
+ScrollTrigger.create({
+  trigger: ".panel-two-desc",
+  toggleActions: "restart none none none",
+  containerAnimation: tween,
+  animation: p2reveal,
+  start: "40% center",
+  scrub: 2,
+});
+
+const sketch = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".panel-two-desc",
+    containerAnimation: tween,
+    start: "40% center",
+    markers: true,
+  },
+});
+
+sketch
+  .from(".circle", {
+    autoAlpha: 0,
+  })
+  .from(".line", {
+    autoAlpha: 0,
+  })
+  .from(".sketch-note-outer", {
+    autoAlpha: 0,
+  });

@@ -35,14 +35,18 @@
     <!-- Horizontal Scroll Section -->
     <section id="panels">
       <div id="panels-container" style="width: 500%">
-        <article id="panel-1" class="panel fullscreen red">
+        <article id="panel-1" class="panel fullscreen">
           <div class="panel-container">
             <div class="flex flex-column gap-4 p-8">
-              <img src="images/dragon.jpeg" alt="dragon" class="panel-one-img">
+              <img
+                src="images/dragon.jpeg"
+                alt="dragon"
+                class="panel-one-img"
+              />
               <h2 class="secondary-heading panel-one-heading">
                 History of <span class="jp">東京</span>
               </h2>
-              <p class="step-description panel-one-description">
+              <p class="step-description panel-one-desc">
                 The history of Tokyo shows the growth of Japan's largest urban
                 center. The eastern part of Tokyo occupies land in the Kantō
                 region that together with the modern-day Saitama Prefecture, the
@@ -53,6 +57,7 @@
                 occupies the Tama district. Tokyo's oldest Buddhist temple is
                 Sensō-ji in Asakusa, founded in 628. The name of Edo first
                 appears in the 12th century.
+                <span class="panel-one-desc-after"></span>
               </p>
 
               <div class="panels-navigation text-right">
@@ -63,27 +68,58 @@
             </div>
           </div>
         </article>
-        <article id="panel-2" class="panel fullscreen orange">
+        <article id="panel-2" class="panel fullscreen">
           <div class="panel-container">
-            <div class="row">
-              <div class="col-6">
-                <img src="" alt="" />
+            <img
+              src="images/japan-lake-serene.jpeg"
+              alt="dragon"
+              class="panel-two-img"
+            />
+            <div class="flex flex-column gap-4 p-8">
+              <h2 class="secondary-heading panel-two-heading">
+                Edo <span class="jp">江戸</span>
+              </h2>
+              <div class="step-description panel-two-desc">
+                Originally a fishing village named Edo, the city became a
+                prominent political center in 1603, when it became the seat of
+                the Tokugawa shogunate. By the mid-18th century, Edo was one of
+                the most populous cities in the world at over one million.
+                Following the end of the shogunate in 1868, the imperial capital
+                in Kyoto was moved to the city, which was renamed Tokyo
+                (literally "eastern capital").
+                <!-- <br /><br />Tokyo was devastated
+                by the 1923 Great Kantō earthquake, and again by Allied bombing
+                raids during World War II. Beginning in the 1950s, the city
+                underwent rapid reconstruction and expansion, going on to lead
+                Japan's post-war economic recovery. Since 1943, the Tokyo
+                Metropolitan Government has administered the prefecture's 23
+                special wards (formerly Tokyo City), various bed towns and
+                suburbs in the western area, and two outlying island chains. -->
+                <div class="sketch-container">
+                  <img
+                    src="images/boatsketch.webp"
+                    class="sketch"
+                    alt="japanese fishing boat"
+                  />
+                  <div class="sketch-note-1">
+                    <div class="sketch-note-outer">
+                      During the Late and Final Jōmon period (1500-300 BCE), the
+                      weather started to get colder, therefore forcing them to
+                      move away from the mountains. The main food source during
+                      this time was fish, which made them improve their fishing
+                      supplies and tools.
+                    </div>
+                    <span class="line"></span>
+                    <span class="circle"></span>
+                  </div>
+                </div>
               </div>
-              <div class="col-6 flex flex-row">
-                <h2>Panel 2</h2>
-
-                <p class="step-description">
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Including versions of Lorem Ipsum.
-                </p>
-
-                <div class="panels-navigation">
-                  <div class="nav-panel" data-sign="minus">
-                    <a href="#panel-1" class="anchor">Prev</a>
-                  </div>
-                  <div class="nav-panel" data-sign="plus">
-                    <a href="#panel-3" class="anchor">Next</a>
-                  </div>
+              <div class="panels-navigation">
+                <div class="nav-panel" data-sign="minus">
+                  <a href="#panel-1" class="anchor">Prev</a>
+                </div>
+                <div class="nav-panel" data-sign="plus">
+                  <a href="#panel-3" class="anchor">Next</a>
                 </div>
               </div>
             </div>
