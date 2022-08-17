@@ -34,7 +34,7 @@ tween = gsap.to(panels, {
     trigger: "#panels-container",
     pin: true,
     start: "top top",
-    scrub: 0.3,
+    scrub: 1.3,
     // snap: {
     // 	snapTo: 1 / (panels.length - 1),
     // 	inertia: true,
@@ -101,9 +101,9 @@ ScrollTrigger.create({
 const sketch = gsap.timeline({
   scrollTrigger: {
     trigger: ".panel-two-desc",
+    toggleActions: "restart reverse restart reverse",
     containerAnimation: tween,
     start: "40% center",
-    markers: true,
   },
 });
 
@@ -114,6 +114,44 @@ sketch
   .from(".line", {
     autoAlpha: 0,
   })
-  .from(".sketch-note-outer", {
+  .from(".sketch-note", {
     autoAlpha: 0,
   });
+
+// PANEL 3
+const p3headingHtml = turnInnerTextIntoHTML(
+  ".panel-three-heading",
+  "p3-animated-text"
+);
+document.querySelector(".panel-three-heading").innerHTML = p3headingHtml;
+
+const p3 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#panel-3",
+    containerAnimation: tween,
+    start: "20% center",
+  },
+});
+
+p3.from(".p3-animated-text", {
+  y: "400%",
+  ease: "back.out(1)",
+  duration: 1,
+  stagger: {
+    each: 0.15,
+  },
+});
+
+// PANEL 4
+const p4 = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#panel-4",
+    containerAnimation: tween,
+    start: "8% center",
+    markers: true,
+  },
+});
+
+p4.from(".p4-rect", { scale: 0.5 }).from(".p4-circle", {
+  scale: 0,
+});

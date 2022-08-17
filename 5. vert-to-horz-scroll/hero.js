@@ -1,18 +1,6 @@
-function turnInnerTextIntoHTML(selector) {
-  let html = "<div style='display: inline-block;'>";
-  const heading = document.querySelector(selector);
 
-  heading.innerText.split("").map((letter) => {
-    if (letter === " ") {
-      html += `</div><span class="animate-text">&nbsp;</span><div style="display: inline-block;">`;
-    } else {
-      html += `<span class="animate-text">${letter}</span>`;
-    }
-  });
-  return html;
-}
 
-const html = turnInnerTextIntoHTML(".heading");
+let html = turnInnerTextIntoHTML(".heading", "animate-text");
 document.querySelector(".words").innerHTML = html;
 
 const tl = gsap.timeline();
@@ -21,10 +9,10 @@ tl.from(".heading", { xPercent: -10 })
   .from(
     ".img1",
     {
-      x: "50%",
+      x: "40%",
       autoAlpha: 0,
     },
-    "-=.5"
+    "-=.25"
   )
   .from(
     ".animate-text",
