@@ -263,6 +263,19 @@ h4 {
   z-index: 100;
 }
 
+.panel-three-large-text {
+  font-size: 10rem;
+  font-weight: 100;
+  font-family: 'Nova Slim', cursive;
+  position: absolute;
+  text-transform: uppercase;
+  letter-spacing: -1.89rem;
+  color:rgb(61, 61, 61);
+  top:18%;
+  left:15%;
+  z-index: 100;
+}
+
 .panel-three-heading-en {
   font-size: 8rem;
   font-weight: 300;
@@ -306,7 +319,16 @@ h4 {
   background-color: #ffffff;
   transform: translate(-50%, -100%);
 }
-
+.panel-four-desc {
+  z-index: 100;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  color:#a8bdb2;
+  background-color: rgba(0, 0, 0, 0.521);
+  padding: 1.5rem;
+  max-width: 14rem;
+}
 .panel-four-heading {
   position: absolute;
   top: 0;
@@ -332,6 +354,12 @@ h4 {
 }
 
 /* end panels */
+
+
+/* ACTIVITIES */
+.activties {
+  color: white;
+}
 
 /* HEADER */
 .content {

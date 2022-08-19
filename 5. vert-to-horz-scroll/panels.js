@@ -152,6 +152,8 @@ const p4 = gsap.timeline({
   },
 });
 
-p4.from(".p4-rect", { scale: 0.5 }).from(".p4-circle", {
-  scale: 0,
-});
+p4.from(".p4-rect", { scale: 0.5 })
+  .from(".p4-circle", {
+    scale: 0,
+  })
+  .from(".panel-four-desc", { autoAlpha: 0, scale: 0.25}, "-=.25");
