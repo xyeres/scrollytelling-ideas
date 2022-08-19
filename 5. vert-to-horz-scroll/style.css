@@ -361,6 +361,13 @@ h4 {
   color: white;
 }
 
+.card {
+  border: 1px solid rgba(32, 178, 171, 0.498);
+  padding: 1.5rem;
+  margin: 1rem;
+  font-size: .9rem;
+}
+
 /* HEADER */
 .content {
   display: flex;

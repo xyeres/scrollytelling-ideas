@@ -148,7 +148,6 @@ const p4 = gsap.timeline({
     trigger: "#panel-4",
     containerAnimation: tween,
     start: "8% center",
-    markers: true,
   },
 });
 
@@ -156,4 +155,23 @@ p4.from(".p4-rect", { scale: 0.5 })
   .from(".p4-circle", {
     scale: 0,
   })
-  .from(".panel-four-desc", { autoAlpha: 0, scale: 0.25}, "-=.25");
+  .from(".panel-four-desc", { autoAlpha: 0, scale: 0.25 }, "-=.25");
+
+// ACTIVITIES
+const activities = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#activities",
+    toggleActions: "restart reverse restart reverse",
+    start: "20% top",
+    markers: true,
+  },
+});
+
+activities.from(".card", {
+  y: 300,
+  ease: "back.out(1)",
+  duration: 1,
+  stagger: {
+    each: 0.15,
+  },
+});
