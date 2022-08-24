@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M Stroke</title>
+    <style>
+      body {
+        min-height: 150vh;
+      }
+      .stroke-container {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+      }
+      svg {
+        display: inline-block;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vanilla JavaScript example for scroll triggered path draw, no gsap or plugins.</h1>
+    <div class="stroke-container">
+      <svg
+        preserveAspectRatio="xMidYMax meet"
+        viewBox="0 0 523 1864"
+        fill="none"
+        stroke-width="2.5"
+      >
+        <path
+          d="M86.5 0.5C16.6667 97.8333 -75.8 295.5 113 307.5C301.8 319.5 345.5 461.5 314.5 524C432.9 577.6 501.833 709.333 521.5 768.5L421 822.5L446.5 838L507.5 787L461.5 844.5L521.5 776.5L507.5 860L477.5 844.5V851.5H461.5V860C447.667 876.167 419.5 899.9 417.5 865.5C415 822.5 485.5 873 477.5 878.5C469.5 884 479.5 982.5 455.5 997.5C431.5 1012.5 429 1032.5 461.5 1054.5C494 1076.5 467.5 1325.5 461.5 1338C456.7 1348 459.5 1692.5 461.5 1863.5"
+          class="path"
+          stroke="black"
+          pathLength="1"
+        />
+      </svg>
+    </div>
+    <script>
+      const path = document.querySelector(".stroke-container path");
+      const length = 1; //path.getTotalLength(); (if you dont have pathLength set on path el)
+      // Clear Transition
+      path.style.transition = path.style.WebkitTransition = "none";
+
+      path.style.strokeDasharray = length + " " + length;
+
+      path.style.strokeDashoffset = length;
+
+      // Trigger a layout so styles are calculated & the browser
+      // picks up the starting position before animating
+      path.getBoundingClientRect();
+
+      // Define our transition
+      path.style.transition = path.style.WebkitTransition =
+        "stroke-dashoffset .2s ease-in-out";
+      // Go!
+      // path.style.strokeDashoffset = "0";
+
+      // OR animate on scroll...
+      window.addEventListener("scroll", () => {
+        var scrollPercentage =
+          (document.documentElement.scrollTop + document.body.scrollTop) /
+          (document.documentElement.scrollHeight -
+            document.documentElement.clientHeight);
+
+        var drawLength = length * scrollPercentage;
+
+        path.style.strokeDashoffset = length - drawLength;
+      });
+    </script>
+  </body>
+</html>
